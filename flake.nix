@@ -31,6 +31,7 @@
             python3
             python312Packages.pip
             ripgrep
+            slides
             starship
             stow
             tmux
