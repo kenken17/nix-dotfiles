@@ -15,74 +15,85 @@
         pkgs.figlet
       ];
 
-      commonPackages = [
-        # "cowsay"
-        # "awscli"
-        # "bash-completion"
-        # "bat"
-        # "curl"
-        # "expect"
-        # "eza"
-        # "file"
-        # "fzf"
-        # "gcc"
-        # "git"
-        # "git-extras"
-        # "gnome-tweaks"
-        # "httpie"
-        # "jq"
-        # "lua"
-        # "luarocks"
-        # "maven"
-        # "neovim"
-        # "nodejs_18" # Node.js 18, plus npm, npx, and corepack
-        # "python3"
-        # "python312Packages.pip"
-        # "ripgrep"
-        # "slides"
-        # "starship"
-        # "stow"
-        # "tmux"
-        # "wget"
-        # "xsel"
-        # "zoxide"
+      linuxPackages = pkgs: [
+        pkgs.htop
+        pkgs.strace
       ];
+
+      darwinPackages = pkgs: [
+        pkgs.gawk
+      ];
+      # commonPackages = [
+      # "awscli"
+      # "bash-completion"
+      # "bat"
+      # "curl"
+      # "expect"
+      # "eza"
+      # "file"
+      # "fzf"
+      # "gcc"
+      # "git"
+      # "git-extras"
+      # "gnome-tweaks"
+      # "httpie"
+      # "jq"
+      # "lua"
+      # "luarocks"
+      # "maven"
+      # "neovim"
+      # "nodejs_18" # Node.js 18, plus npm, npx, and corepack
+      # "python3"
+      # "python312Packages.pip"
+      # "ripgrep"
+      # "slides"
+      # "starship"
+      # "stow"
+      # "tmux"
+      # "wget"
+      # "xsel"
+      # "zoxide"
+      # ];
     in
     {
-      # packages = {
-      #   x86_64-linux.default =
-      #     # Define a package environment as a profile
-      #     pkgsLinux.buildEnv {
-      #       name = "ken-profile";
-      #       paths = resolvePackages pkgsLinux;
-      #     };
-      # };
+      defaultPackage = {
+        # Define a package environment as a profile for Linux
+        x86_64-linux =
+          let
+            pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          in
+          pkgs.buildEnv {
+            name = "ken-profile";
+            paths = commonPackages pkgs ++ linuxPackages pkgs;
+          };
+
+        # Define a package environment as a profile for macOS
+        aarch64-darwin =
+          let
+            pkgs = nixpkgs.legacyPackages.aarch64-darwin;
+          in
+          pkgs.buildEnv {
+            name = "ken-profile";
+            paths = commonPackages pkgs ++ darwinPackages pkgs;
+          };
+      };
 
       # Development shell for Linux
       devShell.x86_64-linux =
         let
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
-
-          linuxPackages = [
-            pkgs.htop
-            pkgs.strace
-          ];
         in
         pkgs.mkShell {
-          buildInputs = commonPackages pkgs ++ linuxPackages;
+          buildInputs = commonPackages pkgs ++ linuxPackages pkgs;
         };
 
       # Define the development shell for macOS
       devShell.aarch64-darwin =
         let
           pkgs = nixpkgs.legacyPackages.aarch64-darwin;
-
-          darwinPackages = [
-            pkgs.gawk
-          ];
         in
         pkgs.mkShell {
-          buildInputs = commonPackages pkgs ++ darwinPackages;
+          buildInputs = commonPackages pkgs ++ darwinPackages pkgs;
         };
     };
 }
