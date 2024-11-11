@@ -10,11 +10,6 @@
       systemLinux = "x86_64-linux";
       systemMac = "aarch64-darwin";
 
-      commonPackages = pkgs: [
-        pkgs.cowsay
-        pkgs.figlet
-      ];
-
       linuxPackages = pkgs: [
         pkgs.htop
         pkgs.strace
@@ -23,37 +18,38 @@
       darwinPackages = pkgs: [
         pkgs.gawk
       ];
-      # commonPackages = [
-      # "awscli"
-      # "bash-completion"
-      # "bat"
-      # "curl"
-      # "expect"
-      # "eza"
-      # "file"
-      # "fzf"
-      # "gcc"
-      # "git"
-      # "git-extras"
-      # "gnome-tweaks"
-      # "httpie"
-      # "jq"
-      # "lua"
-      # "luarocks"
-      # "maven"
-      # "neovim"
-      # "nodejs_18" # Node.js 18, plus npm, npx, and corepack
-      # "python3"
-      # "python312Packages.pip"
-      # "ripgrep"
-      # "slides"
-      # "starship"
-      # "stow"
-      # "tmux"
-      # "wget"
-      # "xsel"
-      # "zoxide"
-      # ];
+
+      commonPackages = [
+        pkgs.awscli
+        pkgs.bash-completion
+        pkgs.bat
+        pkgs.curl
+        pkgs.expect
+        pkgs.eza
+        pkgs.file
+        pkgs.fzf
+        pkgs.gcc
+        pkgs.git
+        pkgs.git-extras
+        pkgs.gnome-tweaks
+        pkgs.httpie
+        pkgs.jq
+        pkgs.lua
+        pkgs.luarocks
+        pkgs.maven
+        pkgs.neovim
+        pkgs.nodejs_18 # Node.js 18, plus npm, npx, and corepack
+        pkgs.python3
+        pkgs.python312Packages.pip
+        pkgs.ripgrep
+        pkgs.slides
+        pkgs.starship
+        pkgs.stow
+        pkgs.tmux
+        pkgs.wget
+        pkgs.xsel
+        pkgs.zoxide
+      ];
     in
     {
       defaultPackage = {
