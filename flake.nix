@@ -19,7 +19,7 @@
         pkgs.gawk
       ];
 
-      commonPackages = [
+      commonPackages = pkgs: [
         pkgs.awscli
         pkgs.bash-completion
         pkgs.bat
