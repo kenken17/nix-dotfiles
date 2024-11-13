@@ -11,19 +11,22 @@
       systemMac = "aarch64-darwin";
 
       linuxPackages = pkgs: [
-        pkgs.htop
-        pkgs.strace
+        pkgs.gnome-tweaks
       ];
 
       darwinPackages = pkgs: [
-        pkgs.gawk
+        # pkgs.aerospace
+        pkgs.colima
       ];
 
       commonPackages = pkgs: [
-        pkgs.awscli
+        pkgs.awscli2
         pkgs.bash-completion
         pkgs.bat
         pkgs.curl
+        pkgs.dive
+        # pkgs.docker
+        pkgs.dbeaver-bin
         pkgs.expect
         pkgs.eza
         pkgs.file
@@ -31,21 +34,23 @@
         pkgs.gcc
         pkgs.git
         pkgs.git-extras
-        pkgs.gnome-tweaks
+        pkgs.gnused
+        pkgs.gradle
+        pkgs.gradle-completion
         pkgs.httpie
         pkgs.jq
         pkgs.lua
         pkgs.luarocks
         pkgs.maven
-        pkgs.neovim
-        pkgs.nodejs_18 # Node.js 18, plus npm, npx, and corepack
-        pkgs.python3
+        # pkgs.neovim
+        # pkgs.nodejs_18 # Node.js 18, plus npm, npx, and corepack
+        # pkgs.python3
         pkgs.python312Packages.pip
         pkgs.ripgrep
         pkgs.slides
         pkgs.starship
         pkgs.stow
-        pkgs.tmux
+        # pkgs.tmux
         pkgs.wget
         pkgs.xsel
         pkgs.zoxide
