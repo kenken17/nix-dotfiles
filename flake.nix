@@ -11,6 +11,8 @@
       systemMac = "aarch64-darwin";
 
       linuxPackages = pkgs: [
+        pkgs.docker
+        pkgs.xclip
         pkgs.gnome-tweaks
       ];
 
@@ -50,6 +52,7 @@
         pkgs.slides
         pkgs.starship
         pkgs.stow
+        pkgs.temurin-bin
         # pkgs.tmux
         pkgs.wget
         pkgs.xsel
