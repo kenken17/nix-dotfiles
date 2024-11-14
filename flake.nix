@@ -12,6 +12,7 @@
 
       linuxPackages = pkgs: [
         pkgs.docker
+        pkgs.docker-buildx
         pkgs.xclip
         pkgs.gnome-tweaks
       ];
