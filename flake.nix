@@ -1,5 +1,5 @@
 {
-  description = "A development environment w/ figlet";
+  description = "A development environment";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable"; # Specify the channel
@@ -25,6 +25,7 @@
         pkgs.awscli2
         pkgs.bash-completion
         pkgs.bat
+        pkgs.bruno
         pkgs.curl
         pkgs.dive
         # pkgs.docker
