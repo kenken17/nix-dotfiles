@@ -28,6 +28,7 @@
         pkgs.bat
         pkgs.bruno
         pkgs.curl
+        pkgs.delta
         pkgs.dive
         # pkgs.docker
         pkgs.dbeaver-bin
