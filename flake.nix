@@ -43,6 +43,7 @@
         pkgs.gradle
         pkgs.gradle-completion
         pkgs.httpie
+        pkgs.imagemagick
         pkgs.jq
         pkgs.lua
         pkgs.luarocks
