@@ -11,7 +11,6 @@
       systemMac = "aarch64-darwin";
 
       linuxPackages = pkgs: [
-        pkgs.docker
         pkgs.docker-buildx
         pkgs.xclip
         pkgs.gnome-tweaks
@@ -30,7 +29,7 @@
         pkgs.curl
         pkgs.delta
         pkgs.dive
-        # pkgs.docker
+        pkgs.docker
         pkgs.dbeaver-bin
         pkgs.expect
         pkgs.eza
