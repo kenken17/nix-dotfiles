@@ -12,8 +12,8 @@
 
       linuxPackages = pkgs: [
         pkgs.docker-buildx
-        pkgs.xclip
         pkgs.gnome-tweaks
+        pkgs.xclip
       ];
 
       darwinPackages = pkgs: [
@@ -27,10 +27,10 @@
         pkgs.bat
         pkgs.bruno
         pkgs.curl
+        pkgs.dbeaver-bin
         pkgs.delta
         pkgs.dive
         pkgs.docker
-        pkgs.dbeaver-bin
         pkgs.expect
         pkgs.eza
         pkgs.file
@@ -44,6 +44,7 @@
         pkgs.httpie
         pkgs.imagemagick
         pkgs.jq
+        pkgs.kind
         pkgs.lua
         pkgs.luarocks
         pkgs.maven
