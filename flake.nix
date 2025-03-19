@@ -21,13 +21,17 @@
         # pkgs.aerospace
         pkgs.colima
         pkgs.docker
+        pkgs.gnupg
+        pkgs.gnused
+        pkgs.openssl
+        # pkgs.postgresql
       ];
 
       commonPackages = pkgs: [
         pkgs.awscli2
         pkgs.bash-completion
         pkgs.bat
-        pkgs.bruno
+        pkgs.cargo
         pkgs.curl
         pkgs.dbeaver-bin
         pkgs.delta
@@ -39,7 +43,6 @@
         pkgs.gcc
         pkgs.git
         pkgs.git-extras
-        pkgs.gnused
         pkgs.gradle
         pkgs.gradle-completion
         pkgs.httpie
@@ -49,16 +52,15 @@
         pkgs.lua
         pkgs.luarocks
         pkgs.maven
-        # pkgs.neovim
-        # pkgs.nodejs_18 # Node.js 18, plus npm, npx, and corepack
-        # pkgs.python3
+        pkgs.neovim
         pkgs.python312Packages.pip
         pkgs.ripgrep
         pkgs.slides
         pkgs.starship
         pkgs.stow
         pkgs.temurin-bin
-        # pkgs.tmux
+        pkgs.tmux
+        pkgs.tree-sitter
         pkgs.wget
         pkgs.xsel
         pkgs.zoxide
