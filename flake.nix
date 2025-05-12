@@ -12,8 +12,10 @@
 
       linuxPackages = pkgs: [
         # pkgs.docker-buildx
-        pkgs.kubectl
         pkgs.gnome-tweaks
+        pkgs.htop
+        pkgs.kubectl
+        pkgs.ollama
         pkgs.xclip
       ];
 
