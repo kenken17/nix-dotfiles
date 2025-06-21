@@ -43,6 +43,7 @@
         pkgs.file
         pkgs.fzf
         pkgs.gcc
+        pkgs.python313Packages.notebook
         pkgs.git
         pkgs.git-extras
         pkgs.gradle
