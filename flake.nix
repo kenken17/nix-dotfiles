@@ -50,6 +50,7 @@
         pkgs.httpie
         pkgs.imagemagick
         pkgs.jq
+        pkgs.jujutsu
         pkgs.kind
         pkgs.lua
         pkgs.luarocks
