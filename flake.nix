@@ -56,7 +56,7 @@
         pkgs.luarocks
         pkgs.maven
         pkgs.neovim
-        pkgs.python312Packages.pip
+        pkgs.python313Packages.pip
         pkgs.ripgrep
         pkgs.slides
         pkgs.starship
