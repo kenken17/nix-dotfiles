@@ -12,6 +12,7 @@
 
       linuxPackages = pkgs: [
         # pkgs.docker-buildx
+        pkgs.ffmpeg-full
         pkgs.gnome-tweaks
         pkgs.htop
         pkgs.kubectl
